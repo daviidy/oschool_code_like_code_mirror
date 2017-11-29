@@ -10,6 +10,8 @@ html, body{
   overflow-x: hidden;
   height: 100%;
   max-width: 100%;
+  background: #464741 url("https://d1ffx7ull4987f.cloudfront.net/images/courses/hero/104/javascript-road-trip-part-3-1f417bd2cebba11605303bdc976cb38c.jpg") no-repeat center top / cover;
+
 }
 
 .container-fluid {
@@ -69,3 +71,19 @@ pointer-events: auto;
   height: 100vh;
   overflow: auto;
 }
+.text-instructions { 
+  height: 300px;
+  color: #fff;
+ }
+
+ .container-div {
+
+  height: 100vh;
+  background-color: #9D9E9E;
+ }
+
+  .container-div-1 {
+
+  height: 100vh;
+  background-color: #D9DADA;
+ }

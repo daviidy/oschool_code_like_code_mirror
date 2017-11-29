@@ -30,13 +30,15 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4"><!--column des instructions-->
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4" id="accodion"><!--column des instructions-->
           <div class="for-scrolling-like-a-pro" >
             <div class="instructions"><!--bloc des instructions-->
-              <button class="btn btn-block bellows" type="button" data-toggle="collapse" data-target="#learn"><!--bloc des textes des instructions-->
-                Apprends
+              <button class="btn btn-block bellows" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#learn"><!--bloc des textes des instructions-->
+                
+                    Apprendre
+                
               </button>
-              <div id="learn" class="collapse in">
+              <div id="learn" class="panel-collapse collapse in">
                 <div class="progress">
                   Variables
                 </div>
@@ -68,7 +70,7 @@
               <button class="btn btn-block bellows" type="button" data-toggle="collapse" data-target="#learn2"><!--bloc des textes des instructions-->
                 Instructions
               </button>
-              <div id="learn2" class="collapse in">
+              <div id="learn2" class="collapse">
                 <div class="progress">
                   Variables
                 </div>
@@ -95,12 +97,42 @@
                 </div><!--text-instructions-->
               </div><!--collapse-->
             </div><!--instructions-->
+
+            <div class="instructions"><!--bloc des instructions-->
+              <button class="btn btn-block bellows" type="button" data-toggle="collapse" data-target="#learn3"><!--bloc des textes des instructions-->
+                Erreur
+              </button>
+              <div id="learn3" class="collapse">
+                <div class="progress">
+                  Erreur
+                </div>
+                <h1 class="title-progress">
+                  Erreur
+                </h1>
+                <div class="text-instructions">
+                  <p>Programmers use variables to write code that is easy to
+                    understand and repurpose.</p>
+                </div><!--text-instructions-->
+              </div><!--collapse-->
+            </div>
           </div>
         </div><!--fin col-->
         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+          <div class="container-div">
+
+              
+
+          </div>
 
         </div><!--fin col-->
         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+          <div class="container-div-1">
+
+              
+
+          </div>
+
+
         </div>
       </div><!--row-->
     </div><!--container-->
