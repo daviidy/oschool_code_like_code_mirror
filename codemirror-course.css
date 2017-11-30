@@ -11,7 +11,6 @@ html, body{
   height: 100%;
   max-width: 100%;
   background: #464741 url("https://d1ffx7ull4987f.cloudfront.net/images/courses/hero/104/javascript-road-trip-part-3-1f417bd2cebba11605303bdc976cb38c.jpg") no-repeat center top / cover;
-
 }
 
 .container-fluid {
@@ -66,11 +65,12 @@ pointer-events: auto;
     line-height: 1.6;
 }
 
-.for-scrolling-like-a-pro {
+for-scrolling-like-a-pro {
 
   height: 100vh;
   overflow: auto;
 }
+
 .text-instructions { 
   height: 300px;
   color: #fff;
@@ -87,3 +87,40 @@ pointer-events: auto;
   height: 100vh;
   background-color: #D9DADA;
  }
+
+.title-progress {
+
+  color: #fff;
+}
+
+/*l'editeur de la console */
+
+.entete-editor {
+
+      color: #fff;
+      font-size: 25px;
+      text-align: center;
+      background-color: black;
+      min-height: 5px;
+      font-weight: bold;
+}
+
+.footer-editor {
+    position: relative;
+    margin-bottom: 0;
+    background-color: red;
+    color: white;
+    text-align:left;
+}
+
+.container-fluid-x1 {
+      background-color: red;
+  }
+
+  .container-fluid-x2 {
+      background-color: yellow;
+  }
+.container-fluid-x3 {
+      background-color: red;
+
+  }
