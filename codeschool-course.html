@@ -1,201 +1,278 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Apprendre JavaScript en ligne | Oschool</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--bootstrap call-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<html lang="en">
+<head>
+  <title>Apprendre JavaScript en ligne | Oschool</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--bootstrap call-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-    <!--css and fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="codemirror-course.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <!--css and fonts-->
+  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="codemirror-course.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-    <!--codemirror call-->
-    <script src="codemirror/lib/codemirror.js"></script>
-    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
-    <script src="codemirror/mode/javascript/javascript.js"></script>
-  </head>
+  <!--codemirror call-->
+  <script src="codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="codemirror/theme/vibrant-ink.css">
+  <link rel="stylesheet" href="codemirror/addon/dialog/dialog.css">
+  <link rel="stylesheet" href="codemirror/theme/material.css">
+  <script src="codemirror/mode/javascript/javascript.js"></script>
+  <script src="codemirror/addon/edit/closebrackets.js"></script>
+  <!--jqconsole call-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jq-console/lib/jqconsole.js" type="text/javascript" charset="utf-8"></script>
+  <style>
+    #console {
+      height: 400px;
+      width: 100%;
+      position:relative;
+      background-color: black;
+      border: 2px solid #CCC;
+      color: wheat;
+    }
+    .jqconsole {
+      padding: 10px;
+      padding-bottom: 10px;
+      color: wheat;
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .jqconsole-cursor {
+      background-color: #999;
+    }
+    .jqconsole-blurred .jqconsole-cursor {
+      background-color: #666;
+    }
+    .jqconsole-prompt {
+      color: #0d0;
+    }
+    .jqconsole-old-prompt {
+      color: #0b0;
+      font-weight: normal;
+    }
+    .jqconsole-input {
+      color: #dd0;
+    }
+    .jqconsole-old-input {
+      color: #bb0;
+      font-weight: normal;
+    }
+    .brace {
+      color: #00FFFF;
+    }
+    .paran {
+      color: #FF00FF;
+    }
+    .bracket {
+      color: #FFFF00;
+    }
+    .jqconsole-composition {
+      background-color: red;
+    }
+  </style>
 
-  <!--
+
+</head>
+
+<!--
 =================================================
       Corps de la page
 =================================================
 -->
-  <body>
-    <section>
-
-      <div class="container">
-        <div class="row">
-          <div class="panel-group col-md-4 col-xs-4 col-sm-4 col-lg-4" id="accordion"><!--column des instructions-->
-
-            <div class="panel panel-default instructions"><!--bloc des instructions-->
-
-              <button class="btn btn-block bellows" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#learn"><!--bloc des textes des instructions-->
-
-                <div class="panel-heading">
-                  <div class="panel-title">
-                    Apprendre
-                  </div>
-                </div>
-              </button>
-              <div id="learn" class="panel-collapse collapse in show">
-                <div class="panel-body">
-                  <div class="progress">
-                      Variables
-                  </div>
-                    <h1 class="title-progress">
-                      Variables
-                    </h1>
-                    <div class="text-instructions">
-                      <p>Programmers use variables to write code that is easy to
-                        understand and repurpose.</p>
-                      <p>Imagine you're writing a weather app. Your thermometer outside reports the
-                        temperature in Celsius,
-                        but your goal is to record the temperature in Fahrenheit. </p>
-                      <p>You write a program that takes a temperature of <code>15</code> degrees
-                        Celsius and calculates the temperature in Fahrenheit.</p>
-                      <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
-                        To find Fahrenheit again,
-                        you'd need to write a whole new program to convert <code>16</code> degrees
-                        Celsius to Fahrenheit.</p>
-                      <p>That's where variables come in. Variables allow us to assign data to a
-                        word and use the word to reference the data. If the data changes (like degrees Celsius)
-                        we can replace the variable's value instead of re-writing the program.</p>
-                      <p>In this lesson you will learn about two ways to declare
-                        <em>variables</em>: <code>let</code> and <code>const</code>. </p>
-                    </div><!--text-instructions-->
-                </div>
-              </div><!--collapse-->
-            </div>
-
-            <div class="panel panel-default instructions"><!--bloc des instructions2-->
-
-              <button class="btn btn-block bellows" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#learn1"><!--bloc des textes des instructions2-->
-
-                <div class="panel-heading">
-                  <div class="panel-title">
-                    Instructions
-                  </div>
-                </div>
-              </button>
-              <div id="learn1" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <div class="progress">
-                      Variables
-                  </div>
-                    <h1 class="title-progress">
-                      Variables
-                    </h1>
-                    <div class="text-instructions">
-                      <p>Programmers use variables to write code that is easy to
-                        understand and repurpose.</p>
-                      <p>Imagine you're writing a weather app. Your thermometer outside reports the
-                        temperature in Celsius,
-                        but your goal is to record the temperature in Fahrenheit. </p>
-                      <p>You write a program that takes a temperature of <code>15</code> degrees
-                        Celsius and calculates the temperature in Fahrenheit.</p>
-                      <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
-                        To find Fahrenheit again,
-                        you'd need to write a whole new program to convert <code>16</code> degrees
-                        Celsius to Fahrenheit.</p>
-                      <p>That's where variables come in. Variables allow us to assign data to a
-                        word and use the word to reference the data. If the data changes (like degrees Celsius)
-                        we can replace the variable's value instead of re-writing the program.</p>
-                      <p>In this lesson you will learn about two ways to declare
-                        <em>variables</em>: <code>let</code> and <code>const</code>. </p>
-                    </div><!--text-instructions2-->
-                </div>
-              </div><!--collapse-->
-            </div>
+<body>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4"><!--column des instructions-->
+          <div class="instructions"><!--bloc des instructions-->
+            <button class="btn btn-block bellows" type="button" data-toggle="collapse" data-target="#learn"><!--bloc des textes des instructions-->
+              Apprends
+            </button>
+            <div id="learn" class="collapse in">
+              <div class="progress">
+                Variables
+              </div>
+              <h1 class="title-progress">
+                Variables
+              </h1>
+              <div class="text-instructions">
+                <p>Programmers use variables to write code that is easy to
+                  understand and repurpose.</p>
+                <p>Imagine you're writing a weather app. Your thermometer outside reports the
+                  temperature in Celsius,
+                  but your goal is to record the temperature in Fahrenheit. </p>
+                <p>You write a program that takes a temperature of <code>15</code> degrees
+                  Celsius and calculates the temperature in Fahrenheit.</p>
+                <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
+                  To find Fahrenheit again,
+                  you'd need to write a whole new program to convert <code>16</code> degrees
+                  Celsius to Fahrenheit.</p>
+                <p>That's where variables come in. Variables allow us to assign data to a
+                  word and use the word to reference the data. If the data changes (like degrees Celsius)
+                  we can replace the variable's value instead of re-writing the program.</p>
+                <p>In this lesson you will learn about two ways to declare
+                  <em>variables</em>: <code>let</code> and <code>const</code>. </p>
+              </div><!--text-instructions-->
+            </div><!--collapse-->
+            <!-- ================================================ -->
+          </div><!--instructions-->
+          <div class="instructions"><!--bloc des instructions-->
+            <button class="btn btn-block bellows" type="button" data-toggle="collapse" data-target="#learn2"><!--bloc des textes des instructions-->
+              Instructions
+            </button>
+            <div id="learn2" class="collapse in">
+              <div class="progress">
+                Variables
+              </div>
+              <h1 class="title-progress">
+                Variables
+              </h1>
+              <div class="text-instructions">
+                <p>Programmers use variables to write code that is easy to
+                  understand and repurpose.</p>
+                <p>Imagine you're writing a weather app. Your thermometer outside reports the
+                  temperature in Celsius,
+                  but your goal is to record the temperature in Fahrenheit. </p>
+                <p>You write a program that takes a temperature of <code>15</code> degrees
+                  Celsius and calculates the temperature in Fahrenheit.</p>
+                <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
+                  To find Fahrenheit again,
+                  you'd need to write a whole new program to convert <code>16</code> degrees
+                  Celsius to Fahrenheit.</p>
+                <p>That's where variables come in. Variables allow us to assign data to a
+                  word and use the word to reference the data. If the data changes (like degrees Celsius)
+                  we can replace the variable's value instead of re-writing the program.</p>
+                <p>In this lesson you will learn about two ways to declare
+                  <em>variables</em>: <code>let</code> and <code>const</code>. </p>
+              </div><!--text-instructions-->
+            </div><!--collapse-->
+          </div><!--instructions-->
+        </div><!--fin col-->
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+          <div id="console-code-mirror"></div>
+        </div><!--fin col-->
+        <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+          <div id="console"></div>
+        </div>
+      </div><!--row-->
+    </div><!--container-->
 
 
-            <div class="panel panel-default instructions"><!--bloc des instructions3-->
-
-              <button class="btn btn-block bellows" type="button" data-parent="#accordion" data-toggle="collapse" data-target="#learn2"><!--bloc des textes des instructions3-->
-
-                <div class="panel-heading">
-                  <div class="panel-title">
-                    Erreur
-                  </div>
-                </div>
-              </button>
-              <div id="learn2" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <div class="progress">
-                      Variables
-                  </div>
-                    <h2 class="title-progress">
-                      Variables
-                    </h2>
-                    <div class="text-instructions">
-                      <p>Programmers use variables to write code that is easy to
-                        understand and repurpose.</p>
-                      <p>Imagine you're writing a weather app. Your thermometer outside reports the
-                        temperature in Celsius,
-                        but your goal is to record the temperature in Fahrenheit. </p>
-                      <p>You write a program that takes a temperature of <code>15</code> degrees
-                        Celsius and calculates the temperature in Fahrenheit.</p>
-                      <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
-                        To find Fahrenheit again,
-                        you'd need to write a whole new program to convert <code>16</code> degrees
-                        Celsius to Fahrenheit.</p>
-                      <p>That's where variables come in. Variables allow us to assign data to a
-                        word and use the word to reference the data. If the data changes (like degrees Celsius)
-                        we can replace the variable's value instead of re-writing the program.</p>
-                      <p>In this lesson you will learn about two ways to declare
-                        <em>variables</em>: <code>let</code> and <code>const</code>. </p>
-                    </div><!--text-instructions-->
-                </div>
-              </div><!--collapse-->
-            </div>
-          </div>
+  </section>
+  <script>
+  var myCodeMirror = CodeMirror(document.getElementById('console-code-mirror'), {
+    value: "console.log('');\nconsole.log('');",
+    mode:  "javascript",
+    theme: "material",
+    lineNumbers: true,
+    lineWrapping: true,
+    autoCloseBrackets: true
+  });
 
 
-          <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-            <div class="container-div">
-              <section>
 
-                <div class="container-fluid-x1">
+  </script>
+  <script>
+    var j = jQuery.noConflict();
+    propStartingWith = function (obj, prefix) {
+      var res = [];
+      for(var m in obj) {
+        if(m.indexOf(prefix) === 0) {
+          res.push(m);
+        }
+      }
+      return res;
+    };
 
-                App.js
-               
-                </div>
-              </section>
-              <section>
-                <div class="container-fluid-x2">
+    j(function() {
+      // Creating the console.
+      var header = 'Welcome to JQConsole!\n' +
+                   'Use jqconsole.Write() to write and\n' +
+                   'jqconsole.Input() to read.\n';
+      window.jqconsole = j('#console').jqconsole(header, 'JS> ');
 
-                 la console
-               
-                </div>
-              </section>
-              <section>
-                <div class="container-fluid-x3">
+      // Abort prompt on Ctrl+Z.
+      jqconsole.RegisterShortcut('Z', function() {
+        jqconsole.AbortPrompt();
+        handler();
+      });
+      // Move to line start Ctrl+A.
+      jqconsole.RegisterShortcut('A', function() {
+        jqconsole.MoveToStart();
+        handler();
+      });
+      // Move to line end Ctrl+E.
+      jqconsole.RegisterShortcut('E', function() {
+        jqconsole.MoveToEnd();
+        handler();
+      });
+      jqconsole.RegisterMatching('{', '}', 'brace');
+      jqconsole.RegisterMatching('(', ')', 'paran');
+      jqconsole.RegisterMatching('[', ']', 'bracket');
+      // Handle a command.
+      var handler = function(command) {
+        if (command) {
+          try {
+            jqconsole.Write('==> ' + window.eval(command) + '\n');
+          } catch (e) {
+            jqconsole.Write('ERROR: ' + e.message + '\n');
+          }
+        }
+        jqconsole.Prompt(true, handler, function(command) {
+          // Continue line if can't compile the command.
+          try {
+            Function(command);
+          } catch (e) {
+            if (/[\[\{\(]j/.test(command)) {
+              return 1;
+            } else {
+              return 0;
+            }
+          }
+          return false;
+        });
+      };
 
-                footer
-               
-                </div>
-              </section>
-               
-            </div><!--container-div-->
+      jqconsole.SetKeyPressHandler(function(e) {
+        var text = jqconsole.GetPromptText() + String.fromCharCode(e.which);
+        // We'll only suggest things on the window object.
+        if (text.match(/\./)) {
+          return;
+        }
 
-          </div><!--fin col-->
-          <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-            <div class="container-div-1">
+        var props = propStartingWith(window, text);
+        if (props.length) {
+          if (!j('.suggest').length) {
+            j('<div/>').addClass('suggest').appendTo(j('.jqconsole'));
+          }
+          j('.suggest').empty().show();
+          props.forEach(function(prop) {
+            j('.suggest').append('<div>' + prop + '</div>');
+          });
+          var pos = j('.jqconsole-cursor').offset();
+          pos.left += 20;
+          j('.suggest').offset(pos);
+        } else {
+          j('.suggest').hide();
+        }
+      });
 
-                
+      jqconsole.SetControlKeyHandler(function(e) {
+        j('.suggest').hide();
+        if (e.which === 9 && j('.suggest div').length) {
+          jqconsole.SetPromptText(j('.suggest div').first().text());
+          return false;
+        }
+      });
+      // Initiate the first prompt.
+      handler();
+    });
+  </script>
 
-            </div>
 
-
-          </div>
-        </div> <!--fin-row-->
-      </div><!--container-->
-    </section>
-      
-  </body>
-</html>
+</body>
