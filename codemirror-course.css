@@ -14,11 +14,21 @@ html, body{
 }
 
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
+}
+/*ces class col annulent les expaces entre les blocs*/
+.col-md-4, .col-xs-4, .col-sm-4, .col-lg-4
+
+{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .instructions{
@@ -31,10 +41,9 @@ html, body{
 }
 
 .bellows{
-  padding: 10px;
+padding: 10px;
 font-size: 16px;
 min-height: 40px;
-background: #d4d5d6;
 border-bottom: 1px solid #e9eaea;
 cursor: pointer;
 pointer-events: auto;
@@ -65,18 +74,12 @@ pointer-events: auto;
     line-height: 1.6;
 }
 
-for-scrolling-like-a-pro {
-
-  height: 100vh;
-  overflow: auto;
-}
-
 .text-instructions { 
   height: 300px;
   color: #fff;
  }
 
- .container-div {
+ .contai-div {
 
   height: 100vh;
   background-color: #9D9E9E;
@@ -113,14 +116,22 @@ for-scrolling-like-a-pro {
     text-align:left;
 }
 
-.container-fluid-x1 {
-      background-color: red;
+.contenu-x1 {
+      background-color:#9D9E9E;
+      height: 50px;
   }
 
   .container-fluid-x2 {
       background-color: yellow;
+      height: 565px;
   }
-.container-fluid-x3 {
-      background-color: red;
+.contenu-x3 {
+      margin-top: 0vh;
 
   }
+
+  .container-fluid-x1 h3{
+
+    text-align: center;
+  }
+
