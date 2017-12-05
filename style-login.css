@@ -1,0 +1,96 @@
+body{
+    background: #f6f8f8;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+
+     font-family: 'Muli';
+}
+
+.iconList-item-link{
+        border: 0;
+    color: #aebdc1;
+}
+
+.srt{
+        border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+.tac{
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tac-item{
+    color: #aebdc1;
+    font-size: 80%;
+    font-weight: 600;
+    margin-right: 0.625em;
+    display: inline;
+}
+
+.tac-item-label{
+
+display: inline;
+    font-size: 150%;
+    margin-right: 0.3125em; 
+
+}
+
+.div-border{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.logo-border{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+}
+
+.top-content .text {
+    color: #fff;
+}
+
+.form-top {
+	overflow: hidden;
+    padding: 0 25px 15px 25px;
+    background: #fff;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+}
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+    background: #eee;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+}
+
+.col-sm-8.col-sm-offset-2.text {
+    text-align: center;
+}
+
+.inner-bg {
+    padding: 100px 0 170px 0;
+}
+
+.btn {
+	background-color: #008be8;
+    color: #fff;
+}
+
+.nav {
+    
+    font-size: 1.5em;
+}
