@@ -238,115 +238,98 @@
         </div> <!--fin-row-->
       </div><!--container-->
     </section>
-  <script>
-  var myCodeMirror = CodeMirror(document.getElementById('console-code-mirror'), {
-    value: "console.log('');\nconsole.log('');",
-    mode:  "javascript",
-    theme: "material",
-    lineNumbers: true,
-    lineWrapping: true,
-    autoCloseBrackets: true
-  });
+      <script>
 
 
+    /*var code = $(".codemirror-textarea")[0];
+    var editor = CodeMirror.fromTextArea(code, {
+      content: "hello",
+      mode:  "javascript",
+      theme: "material",
+      lineNumbers: true,
+      lineWrapping: true,
+      autoCloseBrackets: true
+    });*/
 
-  </script>
-  <script>
-    var j = jQuery.noConflict();
-    propStartingWith = function (obj, prefix) {
-      var res = [];
-      for(var m in obj) {
-        if(m.indexOf(prefix) === 0) {
-          res.push(m);
-        }
-      }
-      return res;
-    };
+    var doc = document.getElementById('console-code-mirror');
+    var myCodeMirror = CodeMirror(doc, {
+      value: "console.log(\"hello\");\n",
+      mode:  "javascript",
+      theme: "material",
+      lineNumbers: true,
+      lineWrapping: true,
+      autoCloseBrackets: true
+    });
 
-    j(function() {
-      // Creating the console.
-      var header = 'Welcome to JQConsole!\n' +
-                   'Use jqconsole.Write() to write and\n' +
-                   'jqconsole.Input() to read.\n';
-      window.jqconsole = j('#console').jqconsole(header, 'JS> ');
 
-      // Abort prompt on Ctrl+Z.
-      jqconsole.RegisterShortcut('Z', function() {
-        jqconsole.AbortPrompt();
-        handler();
-      });
-      // Move to line start Ctrl+A.
-      jqconsole.RegisterShortcut('A', function() {
-        jqconsole.MoveToStart();
-        handler();
-      });
-      // Move to line end Ctrl+E.
-      jqconsole.RegisterShortcut('E', function() {
-        jqconsole.MoveToEnd();
-        handler();
-      });
-      jqconsole.RegisterMatching('{', '}', 'brace');
-      jqconsole.RegisterMatching('(', ')', 'paran');
-      jqconsole.RegisterMatching('[', ']', 'bracket');
-      // Handle a command.
-      var handler = function(command) {
-        if (command) {
-          try {
-            jqconsole.Write('==> ' + window.eval(command) + '\n');
-          } catch (e) {
-            jqconsole.Write('ERROR: ' + e.message + '\n');
+    /*alert(test);*/
+
+
+    /*for jqconsole*/
+
+      var j = jQuery.noConflict();
+      propStartingWith = function (obj, prefix) {
+        var res = [];
+        for(var m in obj) {
+          if(m.indexOf(prefix) === 0) {
+            res.push(m);
           }
         }
-        jqconsole.Prompt(true, handler, function(command) {
-          // Continue line if can't compile the command.
-          try {
-            Function(command);
-          } catch (e) {
-            if (/[\[\{\(]j/.test(command)) {
-              return 1;
-            } else {
-              return 0;
-            }
-          }
-          return false;
-        });
+        return res;
       };
 
-      jqconsole.SetKeyPressHandler(function(e) {
-        var text = jqconsole.GetPromptText() + String.fromCharCode(e.which);
-        // We'll only suggest things on the window object.
-        if (text.match(/\./)) {
-          return;
-        }
+      window.jqconsole = j('#console').jqconsole();
 
-        var props = propStartingWith(window, text);
-        if (props.length) {
-          if (!j('.suggest').length) {
-            j('<div/>').addClass('suggest').appendTo(j('.jqconsole'));
+      j("#run").click(function() {
+        var test = myCodeMirror.getValue("\n");
+        // Creating the console in order to receive codemirror input.
+
+
+
+        //function to retrieve data between quotation marks
+        function extractText( str ){
+          var ret = "";
+
+          if ( /"/.test( str ) ){
+            ret = str.match( /"(.*?)"/ )[1];
+          } else {
+            ret = str;
           }
-          j('.suggest').empty().show();
-          props.forEach(function(prop) {
-            j('.suggest').append('<div>' + prop + '</div>');
-          });
-          var pos = j('.jqconsole-cursor').offset();
-          pos.left += 20;
-          j('.suggest').offset(pos);
-        } else {
-          j('.suggest').hide();
-        }
-      });
 
-      jqconsole.SetControlKeyHandler(function(e) {
-        j('.suggest').hide();
-        if (e.which === 9 && j('.suggest div').length) {
-          jqconsole.SetPromptText(j('.suggest div').first().text());
-          return false;
+          return ret;
         }
+
+        // Handle a command.
+
+        //function run_code
+
+          var commandInstruction = extractText(test);
+          var handler = function(command){
+            if (command) {
+              jqconsole.Reset();
+              try {
+                jqconsole.Write('==> ' + command + '\n');
+              } catch (e) {
+                jqconsole.Write('ERROR: ' + e.message + '\n');
+              }
+            }
+            /*
+            //display the prompt
+
+            jqconsole.Prompt(true, handler, function(command) {
+              // Continue line if can't compile the command.
+
+              return false;
+            });*/
+          }
+
+          handler(commandInstruction);
+
+
+
+
       });
-      // Initiate the first prompt.
-      handler();
-    });
-  </script>
+    </script>
 
 
 </body>
