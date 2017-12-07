@@ -1,13 +1,16 @@
   body{
-
+   
     font-family: 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     color: #505050;
     font-style: normal;
     line-height: 21px;
-    font-size: 18px;
+    font-size: 180%;
     max-width: 100%;
     overflow-x: hidden;
+}
+h2 {
+    font-size: 25px;
 }
 
 b {
