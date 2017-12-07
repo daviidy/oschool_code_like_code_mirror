@@ -13,6 +13,10 @@ html, body{
   background: #464741 url("https://d1ffx7ull4987f.cloudfront.net/images/courses/hero/104/javascript-road-trip-part-3-1f417bd2cebba11605303bdc976cb38c.jpg") no-repeat center top / cover;
 }
 
+#console{
+      height: 100vh !important;
+}
+
 .container-fluid {
     padding-right: 20px;
     padding-left: 20px;
@@ -74,16 +78,12 @@ pointer-events: auto;
     line-height: 1.6;
 }
 
-.text-instructions { 
+.text-instructions {
   height: 300px;
   color: #fff;
  }
 
- .contai-div {
 
-  height: 100vh;
-  background-color: #9D9E9E;
- }
 
   .container-div-1 {
 
@@ -109,29 +109,168 @@ pointer-events: auto;
 }
 
 .footer-editor {
-    position: relative;
-    margin-bottom: 0;
-    background-color: red;
-    color: white;
-    text-align:left;
+        width: 100%;
+        display: flex;
 }
 
-.contenu-x1 {
-      background-color:#9D9E9E;
-      height: 50px;
-  }
 
-  .container-fluid-x2 {
-      background-color: yellow;
-      height: 565px;
-  }
-.contenu-x3 {
-      margin-top: 0vh;
 
-  }
+
 
   .container-fluid-x1 h3{
 
     text-align: center;
   }
 
+.fcn-component-header{
+  background-color: #2a3034;
+  text-align: left;
+  padding: 0;
+  height: 45px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 16px;
+    color: #204056;
+}
+
+.u-hZdX9hXh9Bci8VNUp7s{
+    margin-left: 44px;
+}
+
+.fcn-tabs{
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+}
+
+.editor .fcn-component-header .fcn-button--tab {
+    height: 45px;
+}
+
+.fcn-button--tab.fcn-button--tab--active {
+    background-color: #354551;
+    cursor: default;
+}
+
+.fcn-tabs .fcn-tabs__tab {
+    user-select: none;
+    padding-left: 12px;
+}
+
+.fcn-button--tab {
+    position: relative;
+    margin-right: 2px;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    color: white;
+
+}
+
+.fcn-button {
+    cursor: pointer;
+    /*padding: 8px 20px 8px 20px;*/
+    font-size: 16px;
+    display: inline-block;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    text-align: center;
+    outline: none;
+    border-radius: 0;
+    font-family: "Oxygen","Oxygen","Segoe UI","Helvetica Neue",sans-serif;
+}
+
+.editor-footer {
+    width: 100%;
+    background-color: #2a3034;
+    color: white !important;
+}
+
+.editor-footer__buttons {
+
+    display: flex;
+    position: relative;
+    height: 38px;
+    background-color: #2a3034;
+}
+
+._2SwuUNiEqk9B4NR0dyMMmn {
+    width: 100%;
+    display: flex;
+}
+
+.lx0K4MugD9fFT3l5pAqK1 {
+    color: #fff;
+    background-color: #1a7b72;
+    border-color: transparent;
+}
+
+._2fDy3KzGIsY8FHMg74ib-V {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: all 0.1s ease-in-out;
+    font-family: "Oxygen","Segoe UI","Helvetica Neue",sans-serif,"Helvetica",arial;
+}
+
+._2rMsW52-vRt_jDn9YIoIoj {
+    position: relative;
+}
+
+._2ieC2TsGV0VNSmeBczgbwo {
+    font-size: 14px;
+    position: absolute;
+    top: -27px;
+    background: black;
+    padding: 5px;
+    display: none;
+    white-space: nowrap;
+}
+
+.bCD0tEslEFIV_i4IX_5ip {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    color: white;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 8px;
+    top: 0px;
+    left: 5px;
+    border-top-color: black;
+}
+
+.fcn-control {
+    text-align: center;
+    font-size: 16px;
+    color: #859098;
+    cursor: pointer;
+    padding: 14px;
+    background-color: inherit;
+}
+
+._3QwoyZ-5nUFRrbC-LsvaCS {
+    font-family: 'ikona';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+}

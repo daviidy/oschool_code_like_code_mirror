@@ -85,40 +85,6 @@
 =================================================
 -->
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-           
-            <a class="navbar-brand" href="#"><img class="img_logo_brand" src="assets/img/logos/logo_oschool.png"></a>
-          </div>
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="#">Cours</a>
-              </li>
-              <li>
-                <a href="#">Chatroom</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Plus
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Boutique</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Username </a></li>
-            </ul>
-         </div>
-        </div>
-    </nav>
   <section>
 
       <div class="container-fluid">
@@ -144,21 +110,21 @@
                       Variables
                     </h1>
                     <div class="text-instructions">
-                      <p>Programmers use variables to write code that is easy to
-                        understand and repurpose.</p>
-                      <p>Imagine you're writing a weather app. Your thermometer outside reports the
-                        temperature in Celsius,
-                        but your goal is to record the temperature in Fahrenheit. </p>
-                      <p>You write a program that takes a temperature of <code>15</code> degrees
-                        Celsius and calculates the temperature in Fahrenheit.</p>
-                      <p>Once you've done this though, you see the temperature now reads <code>16</code> degrees Celsius.
-                        To find Fahrenheit again,
-                        you'd need to write a whole new program to convert <code>16</code> degrees
-                        Celsius to Fahrenheit.</p>
-                      <p>That's where variables come in. Variables allow us to assign data to a
-                        word and use the word to reference the data. If the data changes (like degrees Celsius)
-                        we can replace the variable's value instead of re-writing the program.</p>
-                      <p>In this lesson you will learn about two ways to declare
+                      <p>Les programmeurs utilisent des variables pour écrire du code facile à
+                        comprendre et à réutiliser.</p>
+                      <p>Imaginez que vous développez une application météo. Votre thermomètre extérieur signale la
+                        température en Celsius,
+                        mais votre objectif est d'enregistrer la température en Fahrenheit. </p>
+                      <p>Vous écrivez un programme qui prend une température de <code>15</code> degrés
+                        Celsius et calcule la température en Fahrenheit.</p>
+                      <p>Une fois que vous avez fait cela, vous voyez que la température indique maintenant <code> 16 </code> degrés Celsius.
+                        Pour retrouver la température en Fahrenheit,
+                        vous auriez besoin d'écrire un nouveau programme pour convertir <code>16</code> degrés
+                        Celsius en Fahrenheit.</p>
+                      <p>C'est là que les variables entrent en jeu. Les variables nous permettent d'assigner des données à un
+                        mot et utiliser le mot pour référencer les données. Si les données changent (comme les degrés Celsius)
+                        nous pouvons remplacer la valeur de la variable au lieu de réécrire le programme.</p>
+                      <p>Dans cette lecon, vous apprendrez deux facons de déclarer des
                         <em>variables</em>: <code>let</code> and <code>const</code>. </p>
                     </div><!--text-instructions-->
                 </div>
@@ -225,9 +191,71 @@
                       Erreur
                     </h2>
                     <div class="text-instructions">
-                      <p>Programmers use variables to write code that is easy to
-                        understand and repurpose.</p>
-                      
+                      <p>Si vous remarquez un bug sur cette page, merci de le reporter ici</p>
+                      <!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalNorm">
+    Launch Normal Form
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Modal title
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control"
+                      id="exampleInputEmail1" placeholder="Enter email"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control"
+                          id="exampleInputPassword1" placeholder="Password"/>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                        <input type="checkbox"/> Check me out
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
                     </div><!--text-instructions-->
                 </div>
               </div><!--collapse-->
@@ -236,34 +264,50 @@
 
 
           <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-            <div class="contai-div">
-
-                <div class="contenu-x1">
-
-                  <h3>Console.js</h3>
-               
+            <div class="fcn-component-header"><!--window title-->
+              <div class="u-hZdX9hXh9Bci8VNUp7s">
+                <div class="fcn-tabs">
+                  <span size="100" overflow="true" class="fcn-tabs__tab fcn-button fcn-button--tab fcn-button--tab--active" style="max-width: 200px; width: 100%;">
+                    <!-- react-text: 221 -->app.js<!-- /react-text -->
+                    <span class="fcn-tab__gradient"></span>
+                  </span>
+                  <span class="fcn-tabs__tab fcn-tabs__tab--align-right fcn-button fcn-button--tab fcn-button--tab--inactive fcn-control" overflow="false" style="max-width:200px;">
+                    <i name="fullscreen" class="_3QwoyZ-5nUFRrbC-LsvaCS _2fS_OWNv_ecvbxHy0AwJKk"></i>
+                  </span>
                 </div>
-                <div class="container-fluid-x2">
+              </div>
+            </div><!--end window title-->
+            <div id="console-code-mirror"></div><!--for the console-->
 
-                 
-               
+            <div class="footer-editor">
+              <div class="editor-footer">
+                <div class="fcn-tabs-container">
+                  <div class="editor-footer__buttons">
+                    <div class="_2SwuUNiEqk9B4NR0dyMMmn">
+                      <button id="run" type="submit" style="min-width:80px;" class="_2fDy3KzGIsY8FHMg74ib-V lx0K4MugD9fFT3l5pAqK1">
+                        Exécuter
+                      </button>
+                      <div class="_2rMsW52-vRt_jDn9YIoIoj" style="opacity: 1; margin-top: 0px;">
+                        <span class="_2ieC2TsGV0VNSmeBczgbwo">
+                          Reset Exercise
+                        </span>
+                        <div class="bCD0tEslEFIV_i4IX_5ip">
+                        </div>
+                        <span class="fcn-tabs__tab fcn-button fcn-button--tab fcn-button--tab--inactive fcn-control" overflow="false" style="max-width:200px;">
+                          <i name="reset" class="_3QwoyZ-5nUFRrbC-LsvaCS _3LkjVgY6sd3NulMSJp3dAY"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="contenu-x3">
-                  <a href="#">
-                    <button  type="button" class="btn btn-info bellows"> Run</button>
-                  </a>
+              </div>
+            </div>
 
-                  <a href="#">
-                    <button class="btn btn-danger bellows"> Reset</button>
-                  </a>
-                </div>
-               
-            </div><!--container-div-->
 
-          </div><!--fin col-->
+          </div><!-- fin col-->
           <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-            <div class="container-div-1">
-                
+            <div class="container-div-1" id="console">
+
 
             </div>
 
@@ -272,7 +316,7 @@
         </div> <!--fin-row-->
       </div><!--container-->
     </section>
-      <script>
+    <script>
 
 
     /*var code = $(".codemirror-textarea")[0];
@@ -364,6 +408,7 @@
 
       });
     </script>
+
 
 
 </body>
