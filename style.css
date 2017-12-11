@@ -1,4 +1,4 @@
-  body{
+body{
    
     font-family: 'Muli', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
@@ -30,7 +30,7 @@ b {
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 15px;
-}
+}   
 
 
 .img_logo_brand{
@@ -58,7 +58,7 @@ b {
 }
 
 .nav {
-
+    
     font-size: 1.2em;
     padding-top: 8px;
 }
@@ -134,7 +134,7 @@ b {
 
 .section {
     background: linear-gradient(to left, #21abc7, #616db3);
-
+    
 
         color: white;
         padding-top: 30px;
@@ -145,7 +145,7 @@ b {
 
 .section-info {
     background: url(assets/img/sky-is-the-limit-image-compressed.jpg)no-repeat center center fixed;
-
+    
 
         color: white;
         padding-top: 30px;
@@ -163,17 +163,17 @@ b {
 .social_btn {
     border-radius: 50%;
 }
-
+/* changement des border radius à 8px pour les bordures des articles dans la .card*/
 
 .card{
 
-    background: #fff;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
+    background: #fff; 
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px; 
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    min-height: 70px;
+    min-height: 50px;
     overflow: hidden;
     position: relative;
     margin-bottom: 1.25em;
@@ -181,12 +181,13 @@ b {
     padding: 3.4em;
 
 }
-
+/*dans ce div_img_badge j'ai augmenté le heigth 
+et le width à 175px chacun pour agrandir la taille des images dans les articles.*/
 
 
 .div_img_badge{
 
-
+    
     display: block;
     position: absolute;
     right: auto;
@@ -194,9 +195,9 @@ b {
     z-index: 2;
     bottom: auto;
     left: 0;
-    height: 125px;
+    height: 175px;
     padding: 0.3125em;
-    width: 125px;
+    width: 175px;
 
 }
 
@@ -212,18 +213,20 @@ b {
     margin-bottom: 0.3125em;
     margin-top: 8px;
 }
+/* Annulation de son effets sur les row des articles.*/
 
-.course-content{
+/*.course-content{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     padding-left: 5em;
-    z-index: 3;
+    z-index: auto;
 }
-
+*/
 .text-course-content{
 
     margin-bottom: 0;
+    font-size: 100%;
 }
 
 
@@ -249,7 +252,7 @@ b {
 
     margin-left: auto;
     margin-right: auto;
-        height: 200px;
+    height: 200px;
     width: 200px;
     padding: 0.3125em;
     position: relative;
@@ -258,7 +261,7 @@ b {
 
 .badge-img{
 
-        border-radius: 50%;
+    border-radius: 50%;
     display: block;
     height: 100%;
     width: 100%;
@@ -416,4 +419,13 @@ b {
 }
 .period .timeline-title {
   margin: 0;
+}
+/* ajout des class ci dessous pour*/
+.col-md-4 
+
+{
+    position: relative;
+    min-height: 170px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
